@@ -167,7 +167,8 @@ Session = sqlalchemy.orm.sessionmaker()
 Session.configure(bind=engine)
 session = Session()
 
-
+cursor.execute("Create index idx1 on Color (Color_id);")
+cursor.execute("Create index idx2 on Make (Make_id);")
 
 print ("Do you want to buy a car? Please type YES or NO")
 answer = input()
